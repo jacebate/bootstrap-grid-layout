@@ -1,3 +1,20 @@
+<!-- changes made php & contact us-form action=index.php method=POST -->
+<?php
+$server="localhost";
+$username="root";
+$password="";
+$database="zalego";
+
+$conn = mysqli_connect($server,$username,$password,$database);
+if($conn){
+    echo "Database connected successfully";
+}
+else{
+    "Error occured";
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -65,7 +82,7 @@
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ratione facere quo reiciendis quis adipisci quae. Ullam, dolor consectetur veniam temporibus saepe voluptates quibusdam facilis asperiores distinctio aspernatur, totam quisquam!
                 </p>
-                <form>
+                <form action="index.php" method="POST">
                     <div class="row">
                         <div class="mb-3 col-lg-6">
                             <label for="firstname" class="form-label">First Name</label>
@@ -73,7 +90,7 @@
                         </div>
                         <div class="mb-3 col-lg-6">
                             <label for="lastname" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" placeholder="Enter  yourlast name">
+                            <input type="text" class="form-control" placeholder="Enter  your last name">
                         </div>
         
                     </div>
